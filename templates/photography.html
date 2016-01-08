@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container contact-me">
+      <div class="intro-text contact-intro">Photographs</div>
+      <div class="descriptor-text contact-description-reg">Digital image galleries are nice, but what I really love are pictures you can hold in your hand, the kind that sit in your parents' attic for years just waiting to be rediscovered. I have become an avid iPhone photographer over the years, and often print out my best shots and hanging them on the wall.<br><br>Many of these photos were taken on the Caribbean coast of Nicaragua, where I spent two years as a Peace Corps volunteer. They provide a little glimpse into the lives of my friends and family, who taught me (almost) everything I know about patience, kindness, and generosity.</div>
+      <div class="descriptor-text contact-description photos">Click each thumbnail for an expanded view</div>
+    <div class="container photo-gallery">
+      <ul class="row">
+        <li class="col-xs-6 col-md-4 col-lg-4"><img src="static/img/shrub.jpg" alt="Close-up of my dog's face"></li>
+        <li class="col-xs-6 col-md-4 col-lg-4"><img src="static/img/chessy.jpg" alt="Nicaraguan man with a machete smiling and eating an orange"></li>
+        <li class="col-xs-6 col-md-4 col-lg-4"><img src="static/img/tachito.jpg" alt="Little boy sitting on a wall and watching a baseball game"></li>
+        <li class="col-xs-6 col-md-4 col-lg-4"><img src="static/img/chocoyo.jpg" alt="Smiling baby getting a bath"></li>
+        <li class="col-xs-6 col-md-4 col-lg-4"><img src="static/img/chispirrin.jpg" alt="Laughing man sitting on a horse"></li>
+        <li class="col-xs-6 col-md-4 col-lg-4"><img src="static/img/polla.jpg" alt="Two girls smiling"></li>
+      </ul>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="static/bootstrap.min.js"></script>
+<script src="/path/to/noframework.waypoints.min.js"></script>
+<script>
+$(document).ready(function(){
+ $('li img').on('click',function(){
+      var src = $(this).attr('src');
+      var img = '<img src="' + src + '" class="img-responsive"/>';
+      $('#myModal').modal();
+      $('#myModal').on('shown.bs.modal', function(){
+          $('#myModal .modal-body').html(img);
+      });
+      $('#myModal').on('hidden.bs.modal', function(){
+          $('#myModal .modal-body').html('');
+      });
+ });
+})
+</script>
+{% endblock %}

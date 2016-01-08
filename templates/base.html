@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <title>{{homepage}}</title>
+<!--link to bootstrap here if using it-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+
+  <body {% if not request.path == "/index" %} class="secondary-body" {% endif %}>
+
+<!--fancy hamburger menu-->
+    <nav {% if request.path == "/index" %} class="navbar navbar-default navbar-fixed-top jbm-header" {% else %} class="navbar navbar-default navbar-fixed-top jbmnav-secondary" {% endif %}>
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          {% if not request.path == "/index" %}
+        <a href="/index" class="navbar-brand page-scroll">Jessamine Bartley-Matthews</a>
+        {% endif %}
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden active"><a href="#page-top"></a></li>
+            <li {% if request.path == "/about" %} class="active"{% endif %}>
+              <a href="/about">About</a></li>
+            <li {% if request.path == "/index" %} class="active"{% endif %}>
+              <a href="/index">Portfolio</a></li>
+            <li {% if request.path == "/photography" %} class="active"{% endif %}>
+              <a href="photography">Photos</a></li>
+            <li {% if request.path == "/contact" %} class="active"{% endif%}>
+              <a href="contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+    {% block infoPage %} {% endblock %}
+    {% block homepage %} {% endblock %}
+    {% block javaScript %} {% endblock %}
+    {% block fourohfour %} {% endblock %}
+
+    <footer>
+      <ul class="footer-links">
+        <li><a href="https://instagram.com/jessaminnne/"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/jessaminnne"><i class="fa fa-twitter-square"></i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=920193"><i class="fa fa-facebook-square"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/jessaminebartleymatthews"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+    <p class="copyright">Design and Content &copy; 2015 Jessamine Bartley-Matthews</p>
+    </footer>
+
+  </body>
+</html>

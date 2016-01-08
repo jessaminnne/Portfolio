@@ -1,0 +1,518 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* PAGE LAYOUT */
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+/* normal CSS goes here */
+
+/* Font */
+@font-face {
+  font-family: 'Poly', serif;
+  src: local('Poly'),url('Poly.woff');
+}
+
+header{
+
+  text-align: center;
+  background-attachment: scroll;
+  background-image: url(../static/img/asters.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .intro-text{
+  padding-top: 15em;
+  font-size: 1.5em;
+  padding-bottom: 8px;
+}
+
+header .descriptor-text{
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.jbm-header-solid{
+  background-color: green;
+}
+
+.container{
+  padding-top: 0;
+  margin: 0 auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 80%;
+  color: white;
+  z-index: 10;
+  vertical-align: top;
+}
+
+.photo-gallery{
+  margin-top: 5em;
+}
+
+ /*container element for about me page*/
+.about-pic{
+  display:block;
+  margin: 0 auto;
+  /*width: 50%;*/
+  padding-top: 3.8em;
+}
+
+.second-line{
+  display: block;
+  font-size: 1em;
+  color: gray;
+  text-align: center;
+}
+
+.secondary-body{
+  background-color: white;
+}
+
+.navbar-default {
+  background-color: rgba(0,0,0,.3);
+  transition-property: padding;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-delay: initial;
+}
+
+.jbm-name{
+  color: white;
+  padding-top: 8%;
+  float:left;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family:'Poly', serif;
+  font-style: italic;
+  font-size: 3em;
+  line-height: 85%;
+  text-align: left;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: gray;
+}
+.navbar-default .navbar-brand:focus{
+  color: white;
+  background-color: transparent;
+}
+
+.navbar-default .nav li a{
+  text-transform: uppercase;
+  font-family: 'Poly', serif;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+  float: right!important;
+  margin-right: -15px;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+  color: #A186F0;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle{
+  background-color: #A186F0;
+}
+
+.navbar-default .navbar-toggle:hover{
+  background-color: white;
+}
+
+.navbar-default .navbar-collapse .active{
+  background-color: transparent;
+  border-radius: 4px;
+  width: auto;
+  text-decoration:underline;
+  color: white;
+}
+
+.navbar-default .navbar-brand{
+  text-transform: uppercase;
+  color: white;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: black;
+}
+
+.jbmnav-secondary{
+  background-color: rgba(189,204,242,0.8);
+}
+
+.btn-xl{
+  margin-top: 20px;
+  padding: 8px 25px;
+  border-color: white;
+  background-color: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  color: white;
+  margin-botton: 1.5em;
+}
+
+.btn-xl:hover{
+  background-color: white;
+  color: gray;
+}
+
+.btn-xl:focus{
+  color: white;
+}
+
+.resume-button{
+  background-color: transparent;
+  border-color: rgba(189,204,242,1);
+  color: rgba(189,204,242,1);
+  /*margin-top: 10px;*/
+  /*margin: 0 auto;*/
+  align-content: center;
+  /*padding: 10px 15px;*/
+  margin-bottom: 1.75em;
+}
+
+.resume-button:hover{
+  color:white;
+  background-color: rgba(189,204,242,1);
+}
+
+.resume-button:focus{
+  background-color:rgba(189,204,242,1);
+}
+
+body{
+  font-family: 'Poly', serif;
+  background-color: white;
+  /*background-color: rgba(189,204,242,0.4);*/
+}
+
+#project-list{
+  margin: 0;
+  vertical-align: top;
+  position:relative;
+  top: 0px;
+}
+
+.project-desc{
+  /*background-color: white;*/
+  border-radius: 2px;
+}
+
+.blog-box{
+  margin-top: 5em;
+  margin-bottom: 2em;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 4px;
+  height: auto;
+}
+
+h1{
+  font-size: 2em;
+  color: gray;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 0;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: 1.2em;
+  text-align: center;
+}
+
+h3{
+  font-size: 1em;
+  text-align: center;
+  padding-top: 3px;
+  font-style:italic;
+  margin-bottom: 1em;
+}
+
+img{
+  height: auto;
+  width: 100%;
+  display: block;
+  position: relative;
+  padding:.5em;
+  align-content: center;
+  transition-property:background;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+img:hover{
+  background: white;
+  opacity:0.4;
+
+}
+
+footer{
+  width: 100%;
+  height:4em;
+  background-image: url(../static/img/asters.jpg);
+  background-position:bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+	clear:both;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 15px;
+}
+
+.footer-links{
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 1.5em;
+  display: inline-block;
+  text-decoration: none;
+  float: none;
+  padding: none;
+}
+
+.footer-links li{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 5px;
+  /*float: left;*/
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  /*float: left;*/
+}
+
+a:hover{
+  text-decoration: none;
+  color: #A186F0;
+}
+
+p{
+  font-size: 1em;
+  line-height: inherit;
+  float: none;
+}
+
+ul{
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+ul li img{
+  cursor: pointer;
+}
+
+.copyright{
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  display: block;
+  float; right;
+  /*margin-bottom: 20px;*/
+}
+
+.contact-me{
+  color: gray;
+  font-size: 1em;
+  text-align: center;
+  padding-top: 3em;
+  display:block;
+  margin: 0 auto;
+}
+
+.contact-me .contact-intro{
+  font-size: 2.5em;
+  color: rgba(189,204,242,1);
+  padding-bottom: .2em;
+  margin-top: .5em;
+}
+
+.contact-me .contact-description{
+  font-size: 1.2em;
+  color: rgba(189,204,242,1);
+  font-style:italic;
+  padding-bottom: .5em;
+}
+
+.contact-me .contact-description-reg{
+  font-style: normal;
+  padding-bottom: .5em;
+  color: gray;
+}
+
+.contact-me .contact-description .photos{
+  padding-bottom: none;
+}
+
+label{
+  color: gray;
+}
+
+input{
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.map{
+  display: inline-block;
+  text-align: center;
+  float: none;
+  padding-bottom: 3em;
+  vertical-align: top;
+}
+
+.footer-links{
+  float: left;
+  padding: none;
+}
+
+#secondary-footer{
+  position: absolute;
+  height: 10%;
+}
+
+/* media queries for responsivity */
+@media only screen and (min-width: 720px){
+  .about-pic{
+    width: 25em;
+  }
+  .second-line{
+    width: auto;
+  }
+  .column-xs-12{
+    float: none;
+  }
+
+  .about-pic{
+    float: none;
+  }
+
+  .footer-links{
+    float: left;
+    padding: none;
+  }
+
+  }
+@media only screen and (min-width: 481px) and (max-width:719px){
+  .jbm-name{
+    font-size: 2.5em;
+    padding-top: 2em;
+    line-height: 90%;
+  }
+  .about-pic{
+    width: 18em;
+    margin: 0 auto;
+  }
+  .col-xs-12{
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .jbm-name{
+    font-size: 2em;
+    padding-top: 2em;
+    line-height: 90%;
+  }
+
+  header .intro-text{
+    padding-top: 100%;
+    font-size: 1.2em;
+  }
+
+  header .descriptor-text{
+    font-size: 2em;
+  }
+
+  .coming-soon{
+    padding-top: 20%;
+    font-size: 2em;
+  }
+
+  .col-xs-12{
+    float: none;
+  }
+
+  .copyright{
+    font-size: .75em;
+  }
+  .about-pic{
+    width: 20em;
+  }
+
+  .second-line{
+    font-size: .75em;
+  }
+  .resume-button{
+    font-size: .8em;
+  }
+
+@media print{
+/* future task: take off fanciness for printing */
+}

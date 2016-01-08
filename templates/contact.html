@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>{{contact}}></title>
+<div class="container contact-me">
+  <div class="intro-text contact-intro">Stay in touch!</div>
+  <div class="descriptor-text contact-description">Send me your info and I'll write you back!</div>
+
+<label for="name">First Name
+  <input id="name" name="full-name" placeholder="first name">
+</label>
+<label for="email">Email Address
+  <input id="email" name="email-address" placeholder="name@domain.com">
+</label>
+<a href="mailto:jessabm@umich.edu?Subject=This%20Is%20The%20Greatest%20Website%20I've%20Ever%20Seen!" target="_top" class="page-scroll btn btn-xl resume-button col-xs-12">Or just drop me a line!</a>
+<div class="descriptor-text contact-description">You might also find me lurking somewhere near Rackham's reading room</div>
+<div class="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1475.956057098587!2d-83.73836268451835!3d42.280399375596126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1445922139247" width="350" height="275" style="border:0" allowfullscreen></iframe>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block homepage %}
+<header>
+<div class="container">
+  <a class="jbm-name">Jessamine<br>Bartley-<br>Matthews</a>
+  <div class="intro-text">I'm Jessamine, and I'm a</div>
+  <div class="descriptor-text">UX/UI Designer</div>
+  <a href="#project-list" class="page-scroll btn btn-xl portfolio-button">Take a look</a>
+  <br><i class="fa fa-angle-double-down fa-2x"></i>
+</div>
+</header>
+
+<!-- <h1>Portfolio</h1> -->
+<ul id="project-list" class="row">
+  <li class="portfolio-item col-xs-12 col-sm-6 col-md-4">
+      <div class="project-desc">
+      <div class="project-thumb">
+        <img id="zompopo" class="first-image" src= "static/img/zompopo.jpg" alt="Display of home screen on mobile phone with smiling ant logo.">
+        <h2>Zompopo App</h2>
+        <h3>User Research, Wireframes</h3>
+      </div>
+      </div>
+  </li>
+  <li class="portfolio-item col-xs-12 col-sm-6 col-md-4">
+      <div class="project-desc">
+      <div class="project-thumb"></div>
+        <img id="women" src= "static/img/johanna.jpg" alt="Incarcerated woman in Costa Rica.">
+        <h2>Photo Essay</h2>
+        <h3>Photographer, Editor</h3>
+      </div>
+  </li>
+
+  <li class="portfolio-item col-xs-12 col-sm-6 col-md-4">
+      <div class="project-desc">
+      <div class="project-thumb">
+        <img id="maps" src= "static/img/map-icons.jpg" alt="Custom icons of Argentina, Ecuador, Bolivia, and Mexico.">
+        <h2>LatAm Map Icons</h2>
+        <h3>Designer</h3>
+      </div>
+      </div>
+  </li>
+
+  <li class="portfolio-item col-xs-12 col-sm-6 col-md-4">
+      <div class="project-desc">
+      <div class="project-thumb">
+        <img id="wedding" src= "static/img/wedding.jpg" alt="Newlyweds kissing in front of a barn.">
+        <h2>Wedding Photography</h2>
+        <h3>Photographer</h3>
+      </div>
+      </div>
+  </li>
+    </ul>
+{% endblock %}
+
+{% block javaScript %}
+	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/bootstrap.min.js"></script>
+    <script>
+  var firstimage = document.getElementById('zompopo');
+
+  firstimage.onmouseover = function() {
+    var mySrc = firstimage.getAttribute('src');
+    if(mySrc === 'static/img/zompopo.jpg') {
+      firstimage.setAttribute ('src','static/img/test-image.jpg');
+    } else {
+      firstimage.setAttribute ('src','static/img/zompopo.jpg');
+    }
+  }
+  </script>
+
+  <script>
+  var secondimage = document.getElementById('women');
+
+secondimage.onmouseover = function() {
+  var mySrc = secondimage.getAttribute('src');
+    if(mySrc === 'static/img/johanna.jpg') {
+      secondimage.setAttribute ('src','static/img/lidieth.jpg');
+    } else {
+      secondimage.setAttribute ('src','static/img/johanna.jpg');
+    }
+  }
+  </script>
+
+  <script>
+var thirdimage = document.getElementById('maps');
+
+thirdimage.onmouseover = function() {
+  var mySrc = thirdimage.getAttribute('src');
+    if(mySrc === 'static/img/map-icons.jpg') {
+      thirdimage.setAttribute ('src','static/img/cedd2.jpg');
+    } else {
+      thirdimage.setAttribute ('src','static/img/map-icons.jpg');
+    }
+  }
+  </script>
+
+  <script>
+var fourthimage = document.getElementById('wedding');
+
+fourthimage.onmouseover = function() {
+  var mySrc = fourthimage.getAttribute('src');
+    if(mySrc === 'static/img/wedding.jpg') {
+      fourthimage.setAttribute ('src','static/img/wedding2.jpg');
+    } else {
+      fourthimage.setAttribute ('src','static/img/wedding.jpg');
+    }
+}
+</script>
+{% endblock %}
